@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FittingAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FittingAppApplication.class, args);
+
+	    SpringApplication.run(FittingAppApplication.class, args);
 	}
 
 }
