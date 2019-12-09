@@ -26,7 +26,8 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	compile 'org.mongodb:mongo-java-driver:2.12.3'
+	compile 'org.mongodb:mongodb-driver-sync:3.11.2'
+	compile('org.apache.commons:commons-csv:1.4')
 }
 
 test {
