@@ -4,6 +4,9 @@ plugins {
 	id 'java'
 		}
 
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
 
 group = 'com.monique'
 version = '0.0.1-SNAPSHOT'
@@ -27,6 +30,9 @@ configurations {
 			exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 		}
 		compile('org.apache.commons:commons-csv:1.4')
+		compile('org.springframework.boot:spring-boot-starter-data-jpa')
+		compile('org.springframework.security:spring-security-crypto')
+		compile('mysql:mysql-connector-java')
 	}
 
 	test {
