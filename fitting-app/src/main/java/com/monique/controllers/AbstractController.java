@@ -23,7 +23,7 @@ public abstract class AbstractController {
     }
 
     protected void setUserInSession(HttpSession session, User user) {
-        session.setAttribute(userSessionKey, .getUid());
+        session.setAttribute(userSessionKey, user.getUid());
     }
 
     @ModelAttribute("userId")

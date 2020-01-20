@@ -11,13 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class AuthenticationInterceptor {
 
     @Autowired
     UserDao userDao;
 
-    @Override
+    //@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
 
         List<String> nonAuthPages = Arrays.asList("/", "/login", "/register");
@@ -26,7 +27,7 @@ public class AuthenticationInterceptor {
         if ( !nonAuthPages.contains(request.getRequestURI()) ) {
 
             boolean isLoggedIn = false;
-            User user;
+            Optional<User> user;
             Integer userId = (Integer) request.getSession().getAttribute(AbstractController.userSessionKey);
 
             if (userId != null) {
