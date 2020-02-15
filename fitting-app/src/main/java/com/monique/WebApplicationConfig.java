@@ -10,8 +10,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebApplicationConfig implements WebMvcConfigurer {
     @Bean
-    public HandlerInterceptor authenticationInterceptor() {
-        return (HandlerInterceptor) new AuthenticationInterceptor();
+    public AuthenticationInterceptor authenticationInterceptor() {
+        return new AuthenticationInterceptor();
     }
 
     @Override

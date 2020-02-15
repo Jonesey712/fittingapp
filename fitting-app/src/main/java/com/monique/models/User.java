@@ -6,9 +6,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class User {
-    @Id
-    private int userId;
+public class User extends AbstractEntity{
 
     @NotNull
     private String username;
@@ -25,13 +23,13 @@ public class User {
         this.pwHash = hashPassword(password);
     }
 
-    public int getUserId() {
+    /*public int getUserId() {
         return userId;
     }
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
+    }*/
 
     public String getUsername() {
         return username;

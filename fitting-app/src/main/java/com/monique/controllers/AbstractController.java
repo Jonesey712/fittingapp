@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 public abstract class AbstractController {
 
@@ -17,9 +18,10 @@ public abstract class AbstractController {
 
     public static final String userSessionKey = "user_id";
 
-    protected User getUserFromSession(HttpSession session) {
+    protected Optional<User> getUserFromSession(HttpSession session) {
         Integer userId = (Integer) session.getAttribute(userSessionKey);
-        return userId == null ? null : userDao.findById(userId);
+        if (userId != null) return userDao.findById(userId);
+        return null;
     }
 
     protected void setUserInSession(HttpSession session, User user) {

@@ -1,0 +1,124 @@
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+}
+
+.buttons {
+    background: cadetblue;
+    font-size: 25px;
+    margin: 20px auto;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    text-decoration: none;
+    vertical-align: middle;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.buttons input[type="submit"] {
+    background: cadetblue;
+    font-size: 25px;
+
+    text-align: center;
+
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.button {
+
+    background: cadetblue;
+    font-size: 25px;
+    margin: 20px auto;
+    text-align: center;
+
+    width: 300px;
+    height: 200px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+.button input[type="submit"] {
+    background: cadetblue;
+    font-size: 25px;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 325px;
+    padding: 40px;
+    background: burlywood;
+    text-align: center;
+}
+
+.box input[type = "text"], .box input[type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid moccasin;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.box input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid moccasin;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 150px;
+    width: auto;
+}
