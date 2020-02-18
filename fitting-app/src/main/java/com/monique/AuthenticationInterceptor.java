@@ -1,7 +1,7 @@
 package com.monique;
 
 
-import com.monique.controllers.AbstractController;
+/*import com.monique.controllers.AbstractController;
 import com.monique.models.User;
 import com.monique.models.data.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     //@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
 
-        List<String> nonAuthPages = Arrays.asList("/", "/login", "/register");
+        List<String> nonAuthPages = Arrays.asList("/", "/register/login");
 
         // Require sign-in for auth pages
         if ( !nonAuthPages.contains(request.getRequestURI()) ) {
@@ -41,7 +41,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 
             // If user not logged in, redirect to login page
             if (!isLoggedIn) {
-                response.sendRedirect("/login");
+                response.sendRedirect("/register/login");
                 return false;
             }
         }
@@ -53,5 +53,5 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 
     }
-}
+}*/
 

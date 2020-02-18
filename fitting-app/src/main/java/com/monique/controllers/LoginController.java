@@ -1,6 +1,6 @@
 package com.monique.controllers;
 
-import com.monique.models.User;
+/*import com.monique.models.User;
 import com.monique.models.forms.LoginForm;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -17,13 +17,13 @@ public class LoginController extends AbstractController {
     public String login(Model model) {
         model.addAttribute(new LoginForm());
         model.addAttribute("title", "Login In");
-        return "login";
+        return "register/login";
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(@ModelAttribute @Valid LoginForm form, Errors errors, HttpServletRequest request) {
         if (errors.hasErrors()) {
-            return "login";
+            return "register/login";
         }
 
         User theUser = userDao.findByUsername(form.getUsername());
@@ -31,15 +31,16 @@ public class LoginController extends AbstractController {
 
         if (theUser == null) {
             errors.rejectValue("username", "user.invalid", "The given username does not exist");
-            return "login";
+            return "register/login";
         }
 
         if (!theUser.isMatchingPassword(password)) {
             errors.rejectValue("password", "password.invalid", "Invalid password");
+            return "register/login";
         }
 
         setUserInSession(request.getSession(), theUser);
 
         return "redirect: "; //facility employee page
     }
-}
+}*/

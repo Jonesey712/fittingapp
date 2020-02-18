@@ -10,7 +10,7 @@ import java.util.HashMap;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "")
+    @RequestMapping(value = "home")
     public String index(Model model) {
         HashMap<String, String> actionChoices = new HashMap<>();
         actionChoices.put("search", "Search");
@@ -18,6 +18,6 @@ public class HomeController {
         actionChoices.put("add", "Add");
 
         model.addAttribute("actions", actionChoices);
-        return "index";
+        return "home/index";
     }
 }
