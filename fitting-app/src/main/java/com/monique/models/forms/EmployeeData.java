@@ -72,8 +72,8 @@ public class EmployeeData {
             Reader reader = new InputStreamReader(is);
             CSVParser parser = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader);
             List<CSVRecord> records = parser.getRecords();
-            Integer numberofColumns = records.get(0).size();
-            String[] headers = parser.getHeaderMap().keySet().toArray(new String[numberofColumns]);
+            Integer numberOfColumns = records.get(0).size();
+            String[] headers = parser.getHeaderMap().keySet().toArray(new String[numberOfColumns]);
 
             allEmployees = new ArrayList<>();
 
@@ -90,5 +90,10 @@ public class EmployeeData {
             System.out.println("Failed to load employee data");
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<HashMap<String, String>> findByColumnAndValue(String empSearch) {
+
+        return null;
     }
 }
