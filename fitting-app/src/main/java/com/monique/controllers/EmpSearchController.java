@@ -16,7 +16,7 @@ public class EmpSearchController {
     @RequestMapping(value="")
     public String empSearch(Model model) {
         model.addAttribute("columns", EmpListController.columnChoices);
-        return "search";
+        return "employeesearch";
     }
 
     @RequestMapping(value="results")
@@ -30,6 +30,6 @@ public class EmpSearchController {
         }
         model.addAttribute("column", EmpListController.columnChoices);
         model.addAttribute("employee", employee);
-        return "search";
+        return "employeesearch";
     }
 }

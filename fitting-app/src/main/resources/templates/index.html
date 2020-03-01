@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 
-<head>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+<head th:replace="fragments :: head">
 </head>
 
-<header>
-    <img th:src="@{../../photos/caduceus.jpg}" />
-</header>
+
 <body class = "container">
+<div th:replace="fragments :: page-header"></div>
 <nav>
     <a class="button" href="register/login">Employee Login</a>
 </nav>
